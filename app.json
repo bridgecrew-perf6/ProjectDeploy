@@ -1,0 +1,99 @@
+{
+  "name": "WeebProject UserBot",
+  "description": "[WeebProject] A modular Telegram userbot running on Python 3.9.2",
+  "logo": "https://telegra.ph/file/477415d5e5fa928e7f39c.jpg",
+  "keywords": [
+    "telegram",
+    "userbot",
+    "plugin",
+    "project",
+    "python"
+  ],
+  "repository": "https://github.com/fjgaming212/Flicks-Project",
+  "website": "https://t.me/FlicksSupport",
+  "stack": "container",
+  "env": {
+    "ALIVE_NAME": {
+      "description": "Name to show in .alive message",
+      "required": false
+    },
+    "ALIVE_LOGO": {
+      "description": "Show Image/Logo in .alive message. Fill value of image your link image, use telegra.ph or any direct link image",
+      "required": false
+    },  	
+    "API_KEY": {
+      "description": "Get this value from my.telegram.org.",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Get this value from my.telegram.org.",
+      "required": true
+    },
+    "STRING_SESSION": {
+      "description": "Get this value by running [python3 string_session.py] in Termux or local system.",
+      "required": true
+    },
+    "HEROKU_API_KEY": {
+      "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
+      "value": "",
+      "required": true
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Add the Heroku app name here. It helps with userbot updates.",
+      "value": "",
+      "required": true
+    },
+    "TZ_NUMBER": {
+      "description": "Change this value in case your country has multiple Time Zones.",
+      "value": "1",
+      "required": false
+    },
+    "BOTLOG": {
+      "description": "Incase you want to turn off logging, put this to false",
+      "value": "True"
+    },
+    "BOTLOG_CHATID": {
+      "description": "ChatID of the Log group. Set it to '0' if BOTLOG = False and/or if LOGSPAMMER = False.",
+      "value": "0"
+    },
+    "PM_AUTO_BAN": {
+      "description": "PM Auto-Ban Feature Switch. Also known as the 'bleep blop, this is a bot...' module.",
+      "value": "False"
+    },
+    "TMP_DOWNLOAD_DIRECTORY": {
+      "description": "Download location for many modules (GDrive, .download etc..)",
+      "value": "./downloads/"
+    },
+    "CLEAN_WELCOME": {
+      "description": "When a new person joins, the old welcome message is deleted.",
+      "value": "True" 
+    },
+    "LOGSPAMMER": {
+      "description": "Set this to True in case you want the error logs to be stored in the userbot log group, instead of spitting out the file in the current chat, requires a valid BOTLOG_CHATID to be set.",
+      "value": "False"
+    },
+    "TERM_ALIAS": {
+      "description": "Display user for .term command",
+      "value": "Flicks-Project",
+      "required": false
+    },
+    "BOT_TOKEN": {
+      "description": "Inline Mode Helper In Menu",
+      "value": "Fill in your Bot Token",
+      "required": false
+    },
+    "BOT_USERNAME": {
+      "description": "Inline Mode Helper In Username Menu Without @",
+      "value": "Fill in your Bot Username Without @",
+      "required": false
+    }
+  },
+  "addons": [
+    {
+      "plan": "heroku-postgresql",
+      "options": {
+        "version": "13"
+      }
+    }
+  ]
+}
